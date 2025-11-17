@@ -3,9 +3,11 @@ project/
         __init__.py
         core.py
         utils.py
-        …
+        consts.py
+        ...
     tests/
         test_core.py
+    docs/
     README.md
     pyproject.toml
     .gitignore

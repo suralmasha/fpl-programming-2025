@@ -4,7 +4,9 @@ project/
             __init__.py
             core.py
             utils.py
-            …
+            ...
+        consts.py       <-- константы
+        ...
     tests/              <-- тесты
         test_core.py
     docs/               <-- документация
