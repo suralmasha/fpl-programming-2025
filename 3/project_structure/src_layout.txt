@@ -1,0 +1,13 @@
+project/
+    src/                <-- здесь код
+        project_name/
+            __init__.py
+            core.py
+            utils.py
+            …
+    tests/              <-- тесты
+        test_core.py
+    docs/               <-- документация
+    README.md
+    pyproject.toml      <-- зависимости и конфигурация
+    .gitignore

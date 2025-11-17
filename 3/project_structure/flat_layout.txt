@@ -1,0 +1,11 @@
+project/
+    project_name/
+        __init__.py
+        core.py
+        utils.py
+        …
+    tests/
+        test_core.py
+    README.md
+    pyproject.toml
+    .gitignore

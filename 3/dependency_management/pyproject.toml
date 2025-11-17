@@ -1,0 +1,45 @@
+[tool.poetry]
+name = 'ProjectName'
+version = '1.0.0'
+description = 'Короткое описание проекта'
+authors = ['Name Surname <email@example.com>']
+readme = 'README.md'
+packages = [{ include = 'project_name', from = 'src' }]  # поддержка src-layout
+
+[tool.poetry.dependencies]
+python = '3.10.*'
+requests = '^2.31.0'
+fastapi = '0.110'
+
+[tool.poetry.group.dev.dependencies]
+pytest = '8.2'   # фреймворк для тестирования Python-кода
+mypy = '1.10'    # статическая проверка типов
+ruff = '0.0.332' # линтер для проверки стиля и ошибок кода
+black = '24.0'   # автоформаттер кода по PEP8
+isort = '6.0'    # автоупорядочивание импортов
+
+[build-system]  # блок для сборки и установки проекта по стандарту PEP 518
+requires = ['poetry-core>=1.7.0']  # зависимость для сборки проекта, не для работы приложения
+build-backend = 'poetry.core.masonry.api'  # стандартный бекенд poetry
+
+# Инструменты - все конфигурируются из одного файла
+# Настройки pytest
+[tool.pytest.ini_options]
+testpaths = ['tests']
+addopts = '--strict-markers --tb=short'
+
+# Настройки mypy
+[tool.mypy]
+strict = true
+warn_unused_configs = true
+
+# Настройки ruff
+[tool.ruff]
+line-length = 88
+select = ['E', 'F', 'W', 'C', 'B', 'I', 'Q']
+ignore = ['E203', 'W503']
+
+# Настройки black
+[tool.black]
+line-length = 88
+target-version = ['py311']
