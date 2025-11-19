@@ -5,6 +5,9 @@ init:
 update:
 	poetry update
 
+build:
+	poetry build
+
 ruff:
 	poetry run ruff check
 ruff-fix:
