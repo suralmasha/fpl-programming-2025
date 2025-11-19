@@ -1,20 +1,19 @@
 from pydantic import BaseModel, Field, field_validator
-from typing import List, Optional
 from datetime import datetime
+
 
 def print_row(label, value, width=25):
     print(f'{label.ljust(width)} {value}')
 
 if __name__ == '__main__':
-
     # ----------------------------------------
     # Простая модель с типами и дефолтами
     # ----------------------------------------
     class User(BaseModel):
         id: int
         name: str = 'Mark'
-        signup_ts: Optional[datetime] = None  # Optional[datetime] = datetime | None
-        friends: List[int] = []
+        signup_ts: datetime | None = None  # typing.Optional[datetime] = datetime | None
+        friends: list[int] = []
 
     # Авто-конверсия типов
     # (может преобразовывать любые совместимые типы, например:
