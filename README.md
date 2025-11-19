@@ -13,7 +13,7 @@
 - `3_lesson/`
   - `graphs/` — графы
   - `data_structures/` — куча
-  - `project_structure/` — примеры структуры проектов
+  - `project_structures/` — примеры структуры проектов
   - `configurations/` — настройка и чтение конфигурации
   - `dependency_management/` — управление зависимостями, менеджеры зависимостей
 
