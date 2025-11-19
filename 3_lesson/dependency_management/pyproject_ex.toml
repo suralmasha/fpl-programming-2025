@@ -1,26 +1,36 @@
+[build-system]  # блок для сборки и установки проекта по стандарту PEP 518
+requires = ['poetry-core==2.2.0']  # зависимость для сборки проекта, не для работы приложения
+build-backend = 'poetry.core.masonry.api'  # стандартный бекенд poetry
+
 [tool.poetry]
+package-mode = true  # нужна ли нам сборка пакета?
+packages = [{ include = 'project_name', from = 'src' }]  # поддержка src-layout
+
+[project]
 name = 'ProjectName'
 version = '1.0.0'
 description = 'Короткое описание проекта'
-authors = ['Name Surname <email@example.com>']
+authors = [
+    { name = 'Name Surname', email = 'email@example.com' },
+]
 readme = 'README.md'
-packages = [{ include = 'project_name', from = 'src' }]  # поддержка src-layout
 
-[tool.poetry.dependencies]
-python = '3.10.*'
-requests = '^2.31.0'
-fastapi = '0.110'
+requires-python = '==3.10.*'
+dependencies = [
+    'pydantic==2.12.4',
+    'requests==2.32.5',
+    'fastapi==0.121.2',
+]
 
-[tool.poetry.group.dev.dependencies]
-pytest = '8.2'   # фреймворк для тестирования Python-кода
-mypy = '1.10'    # статическая проверка типов
-ruff = '0.0.332' # линтер для проверки стиля и ошибок кода
-black = '24.0'   # автоформаттер кода по PEP8
-isort = '6.0'    # автоупорядочивание импортов
-
-[build-system]  # блок для сборки и установки проекта по стандарту PEP 518
-requires = ['poetry-core>=1.7.0']  # зависимость для сборки проекта, не для работы приложения
-build-backend = 'poetry.core.masonry.api'  # стандартный бекенд poetry
+[dependency-groups]
+test = ['tqdm==4.67.1', 'pytest==9.0.1']
+dev = [
+    'mypy==1.18.2',  # статическая проверка типов
+    'ruff==0.14.0',  # линтер для проверки стиля и ошибок кода
+    'pre-commit==4.4.0',  # фреймворк для проверок перед коммитом
+    'black==25.11.0',  # автоформаттер кода по PEP8
+    'isort==7.0.0'  # автоупорядочивание импортов
+]
 
 # Инструменты - все конфигурируются из одного файла
 # Настройки pytest
