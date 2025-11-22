@@ -1,5 +1,5 @@
 [build-system]  # блок для сборки и установки проекта по стандарту PEP 518
-requires = ['poetry-core==2.2.0']  # зависимость для сборки проекта, не для работы приложения
+requires = ['poetry-core==2.2.1']  # зависимость для сборки проекта, не для работы приложения
 build-backend = 'poetry.core.masonry.api'  # стандартный бекенд poetry
 
 [tool.poetry]
