@@ -1,14 +1,14 @@
 repos:
-  - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: v0.9.6
+  - repo: https://github.com/astral-sh/ruff-pre-commit  # официальный репозиторий с хуками для ruff
+    rev: v0.9.6    # версия хуков ruff-pre-commit
     hooks:
-      - id: ruff
-      - id: ruff-format
+      - id: ruff  # линтер для проверки кода по правилам PEP8 и ruff
+      - id: ruff-format  # автоформатирование кода по правилам ruff
 
-  - repo: local
+  - repo: local  # локальный репозиторий для кастомных хуков
     hooks:
       - id: pytest
         name: Run tests
-        entry: poetry run pytest tests
+        entry: poetry run pytest tests  # команда для запуска тестов через poetry
         language: system  # используем системный Python
-        pass_filenames: false  # не передаем файлы, проверяем весь проект
+        pass_filenames: false  # не передаем конкретные файлы, запускаем тесты для всего проекта
