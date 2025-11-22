@@ -5,20 +5,21 @@
 ## Структура
 
 - `2_lesson/`
-  - `code_design/` — проектирование кода
-  - `data_structures/` — списки, деревья, deque
-  - `dynamic_programming/` — динамическое программирование
-  - `algorithms/` — рекурсия, сортировка
+  - `code_design/` - проектирование кода
+  - `data_structures/` - списки, деревья, deque
+  - `dynamic_programming/` - динамическое программирование
+  - `algorithms/` - рекурсия, сортировка
 
 - `3_lesson/`
-  - `graphs/` — графы
-  - `data_structures/` — куча
-  - `project_structures/` — примеры структуры проектов
-  - `configurations/` — настройка и чтение конфигурации
-  - `dependency_management/` — управление зависимостями, менеджеры зависимостей
+  - `graphs/` - графы
+  - `data_structures/` - куча
+  - `project_structures/` - примеры структуры проектов
+  - `configurations/` - настройка и чтение конфигурации
+  - `dependency_management/` - управление зависимостями, менеджеры зависимостей
 
 - `4_lesson/`
   - `packaging/` - сборка Python-пакета
+  - `logging/` - логирование
 
 ## Использование
 Клонируйте репозиторий и выполняйте задания в соответствующих папках.
