@@ -3,6 +3,12 @@
 python setup.py sdist bdist_wheel
 ```
 
+или
+
+```shell
+python -m build
+```
+
 После этого появятся файлы:
 ```
 dist/

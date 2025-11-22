@@ -1,6 +1,4 @@
-"""
-Располагается в корне проекта (рядом с src/)
-"""
+"""Располагается в корне проекта (рядом с src/)."""
 
 # pip install setuptools wheel
 from setuptools import find_packages, setup
