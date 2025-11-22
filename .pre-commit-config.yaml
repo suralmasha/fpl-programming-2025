@@ -10,6 +10,5 @@ repos:
       - id: pytest
         name: Run tests
         entry: poetry run pytest tests
-        language: system
-        pass_filenames: false
-        always_run: true
+        language: system  # используем системный Python
+        pass_filenames: false  # не передаем файлы, проверяем весь проект
