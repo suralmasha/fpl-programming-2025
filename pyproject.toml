@@ -1,4 +1,4 @@
-[build-system]
+[build-system]  # инструкция к сборке
 requires = ['poetry-core==2.2.1']
 build-backend = 'poetry.core.masonry.api'
 
@@ -16,7 +16,13 @@ authors = [
 readme = 'README.md'
 
 requires-python = '>=3.10,<=3.14'
-dependencies = []
+dependencies = [
+    'httpx==0.28.1',
+    'fastapi[standard]==0.122.1',
+    'uvicorn[standard]==0.38.0',
+    'databases==0.9.0',
+    'aiosqlite==0.21.0',
+]
 
 [dependency-groups]
 test = ['pytest==9.0.1']
