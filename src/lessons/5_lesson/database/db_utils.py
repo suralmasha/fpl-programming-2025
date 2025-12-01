@@ -3,6 +3,18 @@ import sqlite3
 DB_FILE = 'test.db'
 DATABASE_URL = 'sqlite:///./test.db'
 
+# Создание таблицы
+conn = sqlite3.connect(DB_FILE)
+cursor = conn.cursor()
+cursor.execute("""
+CREATE TABLE IF NOT EXISTS users (
+    id INTEGER PRIMARY KEY,
+    name TEXT
+)
+""")
+conn.commit()
+conn.close()
+
 
 def get_users():
     """Получить всех пользователей."""

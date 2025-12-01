@@ -34,7 +34,7 @@ cursor.execute('SELECT * FROM users')
 rows = cursor.fetchall()  # возвращает все строки - список кортежей: [(1, 'Alex')]
 print(rows)
 
-# Удаление всех данных
+# Удаление данных по индексу
 cursor.execute('DELETE FROM users WHERE id = ?', (1,))  # удаляет только запись с указанными id - кортеж
 conn.commit()
 

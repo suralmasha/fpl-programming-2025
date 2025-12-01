@@ -35,7 +35,7 @@ Query-параметр - после ?, не влияет на путь, пере
 http://127.0.0.1:8000/greet?name=Alex&age=30
 
 Или через curl:
-curl "http://127.0.0.1:8000/search?q=python&page=2"
+curl "http://127.0.0.1:8000/greet?name=Alex&age=30"
 """
 
 

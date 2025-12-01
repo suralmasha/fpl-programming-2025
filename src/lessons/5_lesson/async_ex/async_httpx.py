@@ -3,8 +3,7 @@ import asyncio
 import time
 
 import httpx
-
-from .urls import urls
+from urls import urls
 
 """
 `async def` - функция, которая выполняется асинхронно
@@ -16,7 +15,7 @@ from .urls import urls
 `async with` - асинхронный контекстный менеджер, гарантирует корректное закрытие соединения
 `asyncio.gather(*tasks)` - ждем сразу все задачи
 
-Результат: два запроса выполняются одновременно, вывод приходит быстрее, чем по очереди
+Результат: все запросы выполняются одновременно, вывод приходит быстрее, чем по очереди
 """
 
 
@@ -38,4 +37,4 @@ if __name__ == '__main__':
     start_2 = time.time()
     asyncio.run(main())
 
-    print(f'\nAsynchronous ccode was executed in {time.time() - start_2} seconds')  # ~5 секунд
+    print(f'\nAsynchronous ccode was executed in {time.time() - start_2} seconds')

@@ -2,8 +2,7 @@
 import time
 
 import httpx
-
-from .urls import urls
+from urls import urls
 
 """
 Синхронный вариант:
