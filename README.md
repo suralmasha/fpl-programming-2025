@@ -21,5 +21,10 @@
   - `packaging/` - сборка Python-пакета
   - `logging/` - логирование
 
+- `5_lesson/`
+  - `async/` - асинхронность в Python
+  - `api/` - API (Application Programming Interface)
+  - `database/` - подключение базы данных
+
 ## Использование
 Клонируйте репозиторий и выполняйте задания в соответствующих папках.
