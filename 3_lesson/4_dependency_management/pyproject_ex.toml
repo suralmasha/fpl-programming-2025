@@ -1,3 +1,13 @@
+# poetry new - создать проект
+# poetry init - инициализировать Poetry в проекте - НЕ СОЗДАЕТ ОКРУЖЕНИЕ и НЕ УСТАНВАЛИВАЕТ ЗАВИСИМОСТИ
+# poetry add - добавить новые зависимости
+# poetry remove - удалить зависимости
+# poetry env use python3.** - выбрать питон
+# poetry env info --path - увидеть путь к питону
+# poetry update - обновить конфигурацию и poetry.lock - ДЛЯ РАЗРАБОТЧИКА
+# poetry install - устанавливает зависимости из poetry.lock (если он есть) или из pyproject.toml - ДЛЯ ПОЛЬЗОВАТЕЛЯ
+# poetry run ... - запустить команду
+
 [build-system]  # блок для сборки и установки проекта по стандарту PEP 518
 requires = ['poetry-core==2.2.1']  # зависимость для сборки проекта, не для работы приложения
 build-backend = 'poetry.core.masonry.api'  # стандартный бекенд poetry
@@ -15,7 +25,7 @@ authors = [
 ]
 readme = 'README.md'
 
-requires-python = '==3.10.*'
+requires-python = '>=3.10,<=3.14'
 dependencies = [
     'pydantic==2.12.4',
     'requests==2.32.5',
@@ -33,6 +43,7 @@ dev = [
 ]
 
 # Инструменты - все конфигурируются из одного файла
+# Примеры:
 # Настройки pytest
 [tool.pytest.ini_options]
 testpaths = ['tests']

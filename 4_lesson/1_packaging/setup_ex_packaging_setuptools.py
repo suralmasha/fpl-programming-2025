@@ -1,4 +1,4 @@
-"""Располагается в корне проекта (рядом с src/)."""
+"""Располагается в корне проекта (рядом с src/). Обычно называется setup.py"""
 
 # pip install setuptools wheel
 from setuptools import find_packages, setup
@@ -22,5 +22,5 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
     ],
-    python_requires='>=3.10',  # Минимальная версия Python, которая требуется для работы пакета
+    python_requires='>=3.10,<=3.14',  # Версия Python, которая требуется для работы пакета
 )

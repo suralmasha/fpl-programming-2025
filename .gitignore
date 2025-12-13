@@ -3,5 +3,4 @@
 .idea/
 .ruff_cache/
 /dist
-
-scripts
+.DS_Store

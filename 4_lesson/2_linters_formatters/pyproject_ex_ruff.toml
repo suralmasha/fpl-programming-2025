@@ -1,0 +1,65 @@
+[tool.poetry]
+package-mode = false
+
+[project]
+name = 'ProjectName'
+version = '1.0.0'
+description = 'Короткое описание проекта'
+authors = [
+    { name = 'Name Surname', email = 'email@example.com' },
+]
+readme = 'README.md'
+
+requires-python = '>=3.10,<=3.14'
+dependencies = []
+
+[dependency-groups]
+dev = ['ruff==0.14.0']
+
+[tool.ruff]
+line-length = 120  # максимальная длина строки кода
+target-version = 'py310'  # версия Python - позволяет Ruff игнорировать синтаксис, которого нет в этой версии
+exclude = ['**/tests/**']  # папки или файлы, которые Ruff не будет проверять
+
+[tool.ruff.format]
+quote-style = 'single'  # форматер Ruff будет приводить строки к одинарным кавычкам '...' вместо двойных "..."
+
+[tool.ruff.lint]
+# все правила - https://docs.astral.sh/ruff/rules/
+select = [
+    'E',  # ошибки стиля кода по стандарту PEP8
+    'F',  # статический анализ кода (Pyflakes), поиск логических ошибок (например, импортирован модуль, но не используется)
+    'I',  # проверка сортировки и группировки импортов (через isort)
+    'W',  # предупреждения PEP8, не критичные
+    'C',  # контроль сложности функций
+    'T',  # проверка типов и аннотаций
+    'D',  # проверка документации
+    'N',  # PEP8 naming convetions
+    'G',  # flake8-logging-format
+    'Q',  # flake8-quotes
+    'RSE',  # flake8-raise
+    'RET',  # flake8-return
+    'SLF',  # flake8-self
+    'SIM',  # flake8-simplify
+    'TID',  # flake8-tidy-imports
+    'TC',  # flake8-type-checking
+    'INT',  # flake8-gettext
+    'ARG',  # flake8-unused-arguments
+    'PL',  # Pylint
+    'NPY',  # NumPy-specific rules
+    'FAST',  # FastAPI
+    'RUF',  # Ruff-specific rules
+]
+ignore = [
+    'D100',  # Необходимость документации для всех публичных модулей
+    'D104',  # Необходимость документации для всех публичных пакетов
+    'G004',  # Запрет на использование f-строк в логировании
+    'COM812',  # Необходимость использовать закрывающие запятые (не нужно, так как реализовано в форматтере)
+    'RUF001', 'RUF002', 'RUF003',   # Запрет на использование неоднозначных символов в комментариях (конфликт с русским языком)
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = 'pep257'  # использовать стандарт PEP 257 для docstring
+
+[tool.ruff.lint.flake8-quotes]
+inline-quotes = 'single'  # линтер Ruff будет приводить строки к одинарным кавычкам '...' вместо двойных "..."
