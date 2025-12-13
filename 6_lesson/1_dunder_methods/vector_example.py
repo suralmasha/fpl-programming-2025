@@ -1,19 +1,53 @@
 class Vector:
+    """
+    Двумерный вектор в декартовой системе координат.
+
+    Поддерживает сложение векторов и строковые представления
+    для отладки (`repr`) и пользовательского вывода (`str`).
+    """
+
     def __init__(self, x: float, y: float) -> None:
+        """
+        Инициализация вектора.
+
+        :param x: Координата по оси X.
+        :param y: Координата по оси Y.
+        """
         self.x = x
         self.y = y
 
     def __add__(self, other: 'Vector') -> 'Vector':
+        """
+        Сложение двух векторов.
+
+        :param other: Второй вектор для сложения.
+        :return: Новый вектор, являющийся суммой текущего и переданного.
+        :raises TypeError: Если сложение выполняется не с объектом Vector.
+        """
         if not isinstance(other, Vector):
             return NotImplemented
 
         return Vector(self.x + other.x, self.y + other.y)
 
     def __repr__(self) -> str:
+        """
+        Формальное строковое представление вектора.
+
+        Используется для отладки и в интерактивной оболочке.
+
+        :return: Строка вида 'Vector(x, y)'.
+        """
         return f'Vector({self.x}, {self.y})'
-    
-    # def __str__(self) -> str:
-    #     return f'({self.x}, {self.y})'
+
+    def __str__(self) -> str:
+        """
+        Пользовательское строковое представление вектора.
+
+        Используется при выводе через print().
+
+        :return: Строка вида '(x, y)'.
+        """
+        return f'({self.x}, {self.y})'
 
 
 if __name__ == '__main__':
