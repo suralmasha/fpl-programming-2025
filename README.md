@@ -19,7 +19,7 @@
 - `4_lesson/`
   - `1_packaging/` - сборка Python-пакета через setuptools и через Poetry
   - `2_linters_formatters/` - пример настройки линтера и форматтера Ruff
-  - `3_pre_commit/` -  пример настройки линтера и форматтера пре-коммита
+  - `3_pre_commit/` -  пример настройки пре-коммита
   - `4_logging/` - логирование
 
 - `5_lesson/`
@@ -28,4 +28,4 @@
   - `3_database/` - использование и подключение базы данных к API
 
 - `6_lesson/`
-  - `1_dunder_methods/` - магические методы (__double_underscore__)
+  - `1_dunder_methods/` - магические методы (`__double_underscore__`)
