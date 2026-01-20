@@ -8,13 +8,13 @@
   - `1_code_design/` - проектирование кода
   - `2_data_structures/` - списки, deque, деревья, кучи, графы
   - `3_dynamic_programming/` - динамическое программирование
-  - `algorithms/` - рекурсия, сортировка
+  - `4_algorithms/` - рекурсия, сортировка
 
 - `3_lesson/`
   - `1_advanced_data_structures/` - Enum, Pydantic
   - `2_project_structure/` - примеры структуры проектов
   - `3_configuration/` - настройка и чтение конфигурации
-  - `dependency_management/` - управление зависимостями с помощью pyproject.toml, менеджер зависимостей Poetry
+  - `4_dependency_management/` - управление зависимостями с помощью pyproject.toml, менеджер зависимостей Poetry
 
 - `4_lesson/`
   - `1_packaging/` - сборка Python-пакета через setuptools и через Poetry
